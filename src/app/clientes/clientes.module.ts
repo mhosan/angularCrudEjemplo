@@ -8,15 +8,15 @@ import { ListadoClientesComponent } from './listado-clientes/listado-clientes.co
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule  //agregar aqui tambien...
+    FormsModule  //agregar aqui tambien por lo de la banana en la caja...
   ],
   declarations: [AltaClienteComponent, ListadoClientesComponent],
   providers: [
     ClientesService
   ],
   exports: [ 
-    AltaClienteComponent,   //agrego el componente que quiero usar desde afuera del modulo
-    ListadoClientesComponent
+    AltaClienteComponent,     //agrego el componente que quiero usar desde afuera del modulo
+    ListadoClientesComponent  //agrego el componente que quiero usar desde afuera del modulo
   ]  
 })
 export class ClientesModule { }

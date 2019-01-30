@@ -1,22 +1,54 @@
-<h2>Alta cliente</h2>
-<p>
-    <span>Nombre del cliente:</span>
-    <input type="text" [(ngModel)]="cliente.nombre">
-</p>
-<p>
-    <span>Cif (algo asi como un código):</span>
-    <input type="text" [(ngModel)]="cliente.cif" >
-</p>
-<p>
-    <span>Dirección del cliente:</span>
-    <input type="text" [(ngModel)]="cliente.direccion" >
-</p>
-<p>
-    <span>Grupo:</span>
-    <select [(ngModel)]="cliente.grupo">
-        <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.nombre}}</option>
-    </select>
-</p>
-<p>
-    <button (click)="this.nuevoCliente()">Guardar</button>
-</p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Ejemplo simple</h1>
+        <p class="lead">Ejemplo simple de múltiples módulos y componentes</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <span>Nombre del cliente:</span>
+        </div>
+        <div class="col-sm">
+            <input type="text" [(ngModel)]="cliente.nombre">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <span>Cif (algo asi como un código identificador):</span>
+        </div>
+        <div class="col">    
+            <input type="text" [(ngModel)]="cliente.cif" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <span>Dirección del cliente:</span>
+        </div>
+        <div class="col">    
+            <input type="text" [(ngModel)]="cliente.direccion" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <span>Grupo:</span>
+        </div>
+        
+        <div class="col">
+            <select [(ngModel)]="cliente.grupo">
+                <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.nombre}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col offset-1">
+            <span>&nbsp;</span>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col">
+            <button (click)="this.nuevoCliente()">Guardar</button>
+        </div>    
+    </div>
+</div>
